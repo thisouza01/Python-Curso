@@ -25,6 +25,12 @@ print('seu aniversário é ', dia,'/',mes,'/',ano)
 print('===============================')
 
 # terceiro: ler dois numeros e mostrar a soma entre eles
-num1 = input('Digite um numero: ')
-num2 = input('Digite outro numero: ')
-print(int(num1) + int(num2))
+num1 = int(input('Digite um numero: '))
+num2 = int(input('Digite outro numero: '))
+soma = num1 + num2
+
+# desafio extra
+#print('A soma entre ', num1, ' e ', num2, ' é: ',soma)
+
+# outra forma
+print('A soma entre {} e {} é {}'.format(num1, num2, soma))
