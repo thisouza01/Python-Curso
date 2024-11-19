@@ -2,6 +2,7 @@
 num = int(input('Digite um número inteiro: '))
 contador = 0
 
+# loop para tabuada
 for contador in range(10):
     print('{} x {} = {}'.format(num, contador + 1, num * (contador + 1)))
     
