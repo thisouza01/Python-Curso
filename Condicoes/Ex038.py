@@ -1,0 +1,1 @@
+# ler duas notas, calcular media, < 5 reprovado, >= 5 and <= 6.9 recuperação, >= 7 aprovado
