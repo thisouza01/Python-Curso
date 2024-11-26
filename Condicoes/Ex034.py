@@ -5,7 +5,7 @@ salComprador = float(input('Digite seu salário: '))
 qntAnos = int(input('Quantos anos para pagar a casa: '))
 
 # calcula parcela
-parcelaMensal = valorCasa / salComprador * qntAnos
+parcelaMensal = valorCasa / (12 * qntAnos)
 
 # aprova emprestimo
 if parcelaMensal < salComprador * 0.30:
