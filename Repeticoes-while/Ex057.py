@@ -16,18 +16,22 @@ while escolha != 5:
         #soma numeros
         soma = num1 + num2
         print(soma)
+        escolha = int(input('Escolha uma opção: '))
     elif escolha == 2:
         # multiplica numeros    
         multiplica = num1 * num2
         print(multiplica)
+        escolha = int(input('Escolha uma opção: '))
     elif escolha == 3:
         # maior numero
         maior = max(num1, num2)    
         print(maior)
+        escolha = int(input('Escolha uma opção: '))
     elif escolha == 4:
         print('Digite outro numero para adicionar')
         novoNum = float(input())
         print(novoNum)
+        escolha = int(input('Escolha uma opção: '))
     else:
         print('Digite um valor possível!')     
 
