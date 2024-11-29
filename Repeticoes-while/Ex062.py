@@ -10,5 +10,5 @@ while True:
         print('Digite outro numero ou 999 para parar')
     elif numero == 999:
         print('Adeus!')
-        print('A soma dos numeros deu {}'.format(soma))
+        print('A soma dos numeros deu {} e escreveu {}'.format(soma, contador))
         break
