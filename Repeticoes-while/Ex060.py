@@ -7,10 +7,11 @@ contador = 0
 
 cond = 's'
 
+# mostra proximo termo da PA
 while cond == 's':
     pa = primeiroTermo + (razao * contador)
     print(pa)
     contador += 1
-    print('Quer continuar? "s ou n": ')
+    print('Quer mostrar o proximo termo? "s ou n": ')
     cond = input()
     print()
