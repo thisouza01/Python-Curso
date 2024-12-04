@@ -2,6 +2,7 @@ from random import randint
 
 lista = []
 
+# gera numero aleatório
 for i in range(5):
     numInteiro = randint(1, 10)
     lista.append(numInteiro)
