@@ -1,17 +1,27 @@
-lista_valoes = []
+lista_valores = []  # Inicializa a lista
 
 while True:
-    # recebe valor - infinitamente
-    valor = int(input('Valor: '))
+    # Recebe o valor
+    try:
+        valor = int(input('Valor: '))
+    except ValueError:
+        print("Por favor, insira um número válido.")
+        continue
 
-    continuar = str(input('s ou n'))
+    # Adiciona o valor se não estiver na lista
+    if valor not in lista_valores:
+        lista_valores.append(valor)
+        print("Valor adicionado!")
+    else:
+        print("Valor já está na lista!")
 
-    # se nao tiver na lista, adiciona
-    if valor not in lista_valoes:
-        lista_valoes.append(valor) 
+    # Pergunta se o usuário quer continuar
+    continuar = input('Quer continuar? (s/n): ').strip().lower()
+    while continuar not in ('s', 'n'):
+        print('Digite uma opção válida: s ou n')
+        continuar = input('Quer continuar? (s/n): ').strip().lower()
 
-    # condição de saida
+    # Condição de saída
     if continuar == 'n':
-        print(lista_valoes)
-        break       
-
+        print("Lista final:", lista_valores)
+        break
