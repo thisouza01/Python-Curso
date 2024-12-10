@@ -1,0 +1,3 @@
+matriz = []
+numeros = []
+
