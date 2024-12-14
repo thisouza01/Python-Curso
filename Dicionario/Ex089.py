@@ -18,6 +18,10 @@ for _ in range(4):
     # envia a jogada para a lista de jogadas
     jogadas.append(jogada)
 
-# ranking dos jogadores
-for valor in jogadas:
-    print(valor)    
+# Organizar o ranking dos jogadores pelo valor do dado em ordem decrescente
+ranking = sorted(jogadas, key=lambda x: x["dado"], reverse=True)
+
+# Exibir o ranking dos jogadores
+print("Ranking dos jogadores:")
+for posicao, valor in enumerate(ranking, start=1):
+    print(f"{posicao}º lugar: Jogador {valor['jogador']} com dado {valor['dado']}")   
