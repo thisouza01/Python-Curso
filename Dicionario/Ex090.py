@@ -12,16 +12,20 @@ ano_atual = date.today().year
 
 # calcular idade
 idade = ano_atual - dado_pessoal['ano_nascimeto']
-print(idade)
-print()
+
 
 # caso tenha CTPS, pergunte o ano que foi contratado e o salario
 if dado_pessoal['CTPS'] == 0:
     print(dado_pessoal)
 else:
+    # adiciona idade ao dicionario
+    del dado_pessoal['ano_nascimeto']
+
+    # atualiza dicionario
     dado_pessoal.update({
+        'idade': idade,
         'data_contratacao': int(input('Ano contratação: ')),
         'salario': float(input('Salario: '))
     })
-    print(dado_pessoal) 
 
+    print(dado_pessoal)
