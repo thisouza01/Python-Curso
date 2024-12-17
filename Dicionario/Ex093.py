@@ -1,9 +1,8 @@
 # inicia lista
 lista_pessoas = []
-lista_mulheres = []
 
 # inicia soma_idade e contador
-soma_idade = cont = 0
+soma_idade = media = 0
 
 while True:
     # recebe dado da pessoa    
@@ -13,8 +12,11 @@ while True:
         'idade': int(input('Idade: '))
     }
 
+    # soma idade das pessoas cadastradas
+    soma_idade += pessoa['idade']
+
     # envia para lista de pessoas
-    lista_pessoas.append(pessoa)
+    lista_pessoas.append(pessoa.copy())
 
     # continuar?
     continuar = str(input('Continuar? (s / n)')).strip().lower()
@@ -24,17 +26,20 @@ while True:
 
     # saída
     if continuar == 'n':
-        # media de idades
-        for _ in lista_pessoas:
-            soma_idade += pessoa['idade']
-            cont += 1
-        media_idade = soma_idade / cont
-
-        # verifica se é mulher
-        for pss in lista_pessoas:
-            if pessoa['sexo'] == 'f':
-                lista_mulheres.append(pessoa)
-
-        print(f'A lista de mulheres é {lista_mulheres}')
-        print(f'A média das idades dessa lista é {media_idade}')        
+        print(f'\nA quantidade pessoas cadastradas é {len(lista_pessoas)}')        
         break
+
+# media das idades
+media = soma_idade / len(lista_pessoas)
+print(f'\nA media da soma das idades é {media:.2f}')
+
+# verifica se é mulher
+for pss in lista_pessoas:
+    if pss['sexo'] in 'Ff':
+        print(f'{pss["nome"]}', end='')
+print()        
+
+# lista com pessoas de idade acima da media
+for pss in lista_pessoas:
+    if pss['idade'] >= media:
+        print(f'Pessoas com idade superior a media é: {pessoa["nome"]}')
