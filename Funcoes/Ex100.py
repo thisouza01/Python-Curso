@@ -9,7 +9,8 @@ def fatorial(numero = 1, show = False):
         if show == True:
             print(f'{i}', end=' x ' if i > 1 else ' = ')
 
-
+    # mostra resultado
+    print(resultado)
 
 fatorial(5)
 fatorial(5, True)
