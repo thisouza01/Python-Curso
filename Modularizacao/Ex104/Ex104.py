@@ -15,15 +15,6 @@ print(f'Um aumento de 10% no valor de {valor} é {moeda.aumento(valor)}')
 # redução de 13%
 print(f'Uma diminuição de 13% no valor de {valor} é {moeda.reducao(valor)}')
 
-
-# resumo() -> moeda.resumo(p, 80, 35) -> preço, 80% aumento, 35 de redução
-# ========
-# resumo do valor
-# ========
-# preco analisado: 
-# metade do preço: 
-# ========
-
 # pacote utilidades que tenha dois modulos internos chamados moeda e dado
 # transfira todas as funçoes utilizadas para os pacotes e mantenha funcionando
 
